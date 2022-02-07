@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 200px;
+      height : 100px;
+      margin: 10px;
+      border: 3px solid black;
+    }
+    .input-check:checked ~ .box{  /* inputcheck 뒤에 나오는 box 에서 형제들만 적용 , + 라면 input 다음 바로 나오는 box만 적용*/
+      background : #fff000;
+    }
+  </style>
+</head>
+<body>
+  <label for="input-check">체크하세요.</label>
+  <input type="checkbox" class = "input-check" id="input-check">
+  <!-- <label>
+    <input type="checkbox" class = "input-check">동의합니다.
+  </label> -->
+
+  <div class="container">
+    <div class="box">BOX</div>
+  </div>
+  <div class="box">BOX</div>
+  <div class="box">BOX</div>
+</body>
+</html>

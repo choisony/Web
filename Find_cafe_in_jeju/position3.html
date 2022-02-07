@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      height : 10000px;
+    }
+    div{
+      /* position : static; */
+      display : inline-block;
+      width : 200px;
+      height : 200px;
+      /* opacity : 0.7; */
+    }
+    .b{
+      background: green;
+
+      position : relative;
+      z-index : 100;  /* z-index는 position static 아니면 적용됨 */
+    }
+    .child{
+      position : absolute;
+      left: 10px;
+      top: 10px;
+      width: 50px;
+      height : 50px;
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est accusamus numquam omnis. Impedit natus dolore qui. Eos reiciendis laborum in soluta inventore totam, eius blanditiis veniam delectus, dolor voluptatum labore.</p>
+  <div class="b">
+    <div class="child"></div> <!--position을 absolute로 하더라도 부모인 b를 기준으로 위치함, 0,0 해도 왼쪽 맨위로 안감 -->
+  </div>
+</body>
+</html>

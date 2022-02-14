@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var z = 100;
+    function sum(x){ // x는 매개변수(parameter)이면서 지역변수(local value)
+      let y=50; // y는 지역변수
+      z = z+y;
+      return x+y;
+    }
+    document.write(sum(10)); // 10은 전달인자(argument)
+    document.write('<br>');
+    // document.write(x,y); // x,y ==> not defined
+    document.write(z);
+
+    document.write('<br>');
+
+    function sum_2(x,y){
+      return x+y;
+    }
+    let sumArrowFunction = (x,y) => x+y;
+    document.write(sum_2(10,20));
+    document.write(sumArrowFunction(10,20));
+    document.write('<br>');
+    document.write(`sum_2(10,20): ${sum_2(10,20)} wowwow<br>`);
+    document.write('hello')
+    //console.log()
+  </script>
+</body>
+</html>
